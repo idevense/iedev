@@ -1,0 +1,50 @@
+@supports (grid-area: auto) {
+    .site {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 10em auto auto;
+        grid-template-areas:
+            "header header header"
+            "nav main sidebar"
+            "nav main sidebar"
+            "footer footer footer";
+    }
+    
+    .site-header {
+       grid-area: header;
+    }
+    
+    .site-main {
+      grid-area: main;  
+    }
+    
+    .widget-area {
+        grid-area: sidebar;
+    }
+    
+    .site-footer {
+        grid-area: footer;
+    }
+
+    .main-navigation {
+        grid-area: nav;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+    }
+    
+    .btn-trigger{
+        display: block;
+        position: fixed;
+        top: 1.5em;
+        left: -1.8em;
+        transition: left .6s;
+        padding: .1em .5em;
+        color: white;
+        background: hsl(0, 0%, 10%);
+        border: none;
+        transform: rotate(90deg);
+    }
+
+}
