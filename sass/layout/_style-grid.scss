@@ -1,8 +1,9 @@
 @supports (grid-area: auto) {
+   @media screen and (min-width: $query__medium) {
     .site {
         display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 10em auto auto;
+        grid-template-rows: 1fr minmax(1em, auto);
+        grid-template-columns: 1em auto 10em;
         grid-template-areas:
             "header header header"
             "nav main sidebar"
@@ -34,17 +35,5 @@
         flex-direction: column;
     }
     
-    .btn-trigger{
-        display: block;
-        position: fixed;
-        top: 1.5em;
-        left: -1.8em;
-        transition: left .6s;
-        padding: .1em .5em;
-        color: white;
-        background: hsl(0, 0%, 10%);
-        border: none;
-        transform: rotate(90deg);
     }
-
 }

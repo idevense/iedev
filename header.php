@@ -41,7 +41,7 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
+                <?php get_search_form(); ?>
 		<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'iedev'); ?><span class="screen-reader-text">Reveal menu</span></button>
 	</header><!-- #masthead -->
 
