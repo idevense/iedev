@@ -3,11 +3,11 @@
     .site {
         display: grid;
         grid-template-rows: 1fr minmax(1em, auto);
-        grid-template-columns: 1em auto 10em;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "header header header"
-            "nav main sidebar"
-            "nav main sidebar"
+            "main main main"
+            "main main main"
             "footer footer footer";
     }
     
@@ -16,7 +16,8 @@
     }
     
     .site-main {
-      grid-area: main;  
+      grid-area: main;
+      
     }
     
     .widget-area {
@@ -27,13 +28,13 @@
         grid-area: footer;
     }
 
-    .main-navigation {
+  /*  .main-navigation {
         grid-area: nav;
     }
     
     .main-navigation ul {
         flex-direction: column;
     }
-    
+    */
     }
 }

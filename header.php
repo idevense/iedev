@@ -43,9 +43,8 @@
 		</div><!-- .site-branding -->
                 <?php get_search_form(); ?>
 		<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'iedev'); ?><span class="screen-reader-text">Reveal menu</span></button>
-	</header><!-- #masthead -->
-
-	<nav id="site-navigation" class="main-navigation">
+                
+                <nav id="site-navigation" class="main-navigation">
             			
                         <?php
 				wp_nav_menu( array(
@@ -54,3 +53,6 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	
