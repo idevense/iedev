@@ -1,15 +1,81 @@
-.site-header{
+.site-header {
     display: flex;
-    flex-direction: column;
     background-color: $color__background-header;
-    
-    
-    .site-branding{
+    padding:   1em;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
         
-        text-align: center;
+    @media screen and (min-width: $query__small){
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding: 1em 2em;
+    }
+    .searchform {    
+            background-color: red;
+            margin-right: 10px;
+        }    
+        .btn-trigger{
+            padding: 0;
+            margin: 0;
+        }          
+}
+.main-navigation {
+    display: none;
+}
+    
+    .custom-logo-link{
+        margin-right: 1em;
+        flex-shrink: 0;
+    img {
+        display: block;       
+        height: 70px;
+        width: auto;
+        }
     }
     
-        .searchform{        
+    
+    .site-branding {
+        display: flex;
         
-        }      
+        flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is 
+        min-height: 70px;
+    }
+    
+    .site-branding__text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-right: 10px;     
+       line-height: 1em;    
+        @media screen and (min-width: $query__small) {
+          flex-direction: row;
+          align-items: flex-end;
+          height: 70px;
+          
+        }
+       
+            .site-title {   /*h1*/
+                margin: 0;
+                line-height: 1em; 
+                padding: 0;
+                font-weight: 900;
+    a {
+		color: yellowgreen;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+    }   
 }
+       
+            .site-description{ /*p*/
+                color: yellowgreen;
+                margin: 0;
+                padding: 0;
+                font-style: italic;
+            }
+    }    
