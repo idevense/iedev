@@ -44,10 +44,9 @@
 			endif; ?>
                     </div> 
                 </div><!-- .site-branding -->
-                
-                   
                 <?php get_search_form(); ?>
-		<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'iedev'); ?><span class="screen-reader-text">Reveal menu</span></button>
+		<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i>
+<span class="screen-reader-text">Reveal menu</span></button>
                 
                 <nav id="site-navigation" class="main-navigation">
             			
