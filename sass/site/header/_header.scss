@@ -8,23 +8,25 @@
         
     @media screen and (min-width: $query__small){
         justify-content: space-between;
+        flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is 
+        min-height: 70px;
         flex-wrap: nowrap;
         padding: 1em 2em;
     }
-    .searchform {    
+    .pageHeaderSearch {    
             
             margin-right: 10px;
             .fa-search{
                 color: $color__text-header;
             }
         }    
-        .btn-trigger{
+    .btn-trigger{
             padding: 0;
             margin: 0;
-        }          
+    }          
 }
-.main-navigation {
-    display: none;
+.main-navigation ul {
+   // display: none;
 }
     
     .custom-logo-link{
@@ -51,7 +53,8 @@
        justify-content: center;
        align-items: center;
        margin-right: 10px;     
-       line-height: 1em;    
+       line-height: 1em;
+       word-break: keep-all;
         @media screen and (min-width: $query__small) {
           flex-direction: row;
           align-items: flex-end;
@@ -82,3 +85,25 @@
                 font-style: italic;
             }
     }    
+    
+    .site-header__menugroup {
+        display: flex;
+        flex-flow: column nowrap;
+       
+        
+     //  align-items: center;
+     ul {
+         display: flex;
+         flex-direction: column;
+     }
+        @media screen and (min-width: $query__small) {
+          flex-flow: row nowrap;
+        //  align-items: flex-end;
+         justify-content: space-between;
+        ul{
+         display: flex;
+         flex-direction: row;
+         
+        }
+        }
+    }

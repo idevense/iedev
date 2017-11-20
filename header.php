@@ -44,19 +44,24 @@
 			endif; ?>
                     </div> 
                 </div><!-- .site-branding -->
-                <?php get_search_form(); ?>
-		<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i>
-<span class="screen-reader-text">Reveal menu</span></button>
                 
-                <nav id="site-navigation" class="main-navigation">
-            			
-                        <?php
+                <div class="site-header__menugroup">
+                
+                    <?php get_search_form(); ?>
+		
+                    <section id="site-navigation" class="main-navigation">
+                    	<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i>
+                        <span class="screen-reader-text">Reveal menu</span></button>
+                        <nav>
+                            <?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
-			?>
-		</nav><!-- #site-navigation -->
+                            ?>
+                        </nav>    
+                    </section><!-- #site-navigation -->
+                </div><!-- #site-header__menugroup -->
 	</header><!-- #masthead -->
 
 	

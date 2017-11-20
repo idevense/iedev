@@ -1,7 +1,7 @@
 .main-navigation {
 	display: flex;
-        flex-direction: row;
-	justify-content: space-between;
+        flex-direction: column;
+	
 	
 
 	ul {
@@ -10,8 +10,27 @@
                 list-style: none;
 		margin: 0;
 		padding: 0;
-}
-
+                
+            }
+            
+            li {
+               &:hover,
+	&:focus,
+        &:active {
+                   //background-color: white;
+                   color: red;
+                   
+               } 
+            }
+            a {
+                text-decoration: none;
+                color: yellowgreen;
+                &:hover,
+	&:focus,
+	&:active {
+		color: red;
+            }
+            }
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {

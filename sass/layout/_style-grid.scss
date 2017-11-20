@@ -1,4 +1,12 @@
 @supports (grid-area: auto) {
+    .site {
+    display: grid;
+    grid-template-areas:
+            "header"
+            "main"
+            "main"
+            "footer";
+    }
    @media screen and (min-width: $query__medium) {
     .site {
         display: grid;
