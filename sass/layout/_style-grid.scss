@@ -1,58 +1,58 @@
 @supports (grid-area: auto) {
     .site {
     display: grid;
+    width: 100%;
+    grid-template-rows: minmax(1fr, auto);
+    grid-template-columns: minmax(1fr, auto);
+
     grid-template-areas:
             "header"
             "main"
-            "main"
+            "sidebar"
             "footer";
     }
    @media screen and (min-width: $query__medium) {
     .site {
         display: grid;
-        grid-template-rows: 1fr minmax(1em, auto);
-        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
         grid-template-areas:
             "header header"
-            "main main"
-            "main main"
+            "main sidebar"
+            "main sidebar"
             "footer footer";
     }
-    
+
     .site-header {
        grid-area: header;
     }
-    
+
     .site-main {
-      grid-area: main;  
+      grid-area: main;
     }
-    
+
     .widget-area {
         grid-area: sidebar;
+        padding: 1em;
     }
-    
+
     .site-footer {
         grid-area: footer;
     }
 
   /*  .main-navigation {
         grid-area: nav;
-    }
-    
-    .main-navigation ul {
-        flex-direction: column;
-    }
-    */
+    }*/
+
     }
     @media screen and (min-width: $query__wide) {
     .site {
         display: grid;
-        grid-template-rows: 1fr minmax(1em, auto);
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-columns: minmax(1fr, auto);
         grid-template-areas:
             "header header header"
-            "main main main"
-            "main main main"
+            "main main sidebar"
             "footer footer footer";
     }
     }

@@ -1,0 +1,62 @@
+button.btn-trigger {
+  display: block;
+  text-transform: uppercase;
+  width: 100%;}
+
+// container class
+#masthead .main-navigation{
+  display: block;
+}
+
+#masthead .main-navigation.toggled{
+//  display: flex;
+ul {
+  display: block;
+}
+}
+// container class first unordered list
+#masthead .main-navigation ul {
+display: none;
+list-style: none;
+//display: flex;
+//justify-content: space-between;
+//width: 90%;
+//margin: 0 auto;
+//max-width: 1600px;
+padding: 0;
+//flex-direction: column;
+}
+
+//unordered list within an unordered list
+#masthead .main-navigation ul ul {}
+
+ // each navigation item
+#masthead .main-navigation li {color: cyan;}
+
+// each navigation item anchor
+#masthead .main-navigation li a {
+  color: pink;
+  text-decoration: none;
+&:hover,
+&:active,
+&:focus{text-decoration: underline;}
+}
+#masthead .main-navigation li a.active{
+  color: white;
+  background-color: black;
+}
+// unordered list if there is drop down items
+#masthead .main-navigation li ul {}
+
+// each drop down navigation item
+#masthead .main-navigation li li {}
+
+// each drap down navigation item anchor
+#masthead .main-navigation li li a {}
+
+// when button is toggled
+#masthead .main-navigation .toggled,
+.children.toggled,
+.sub-menu.toggled {
+	display: block;
+}

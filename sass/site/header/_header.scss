@@ -1,71 +1,80 @@
 .site-header {
     display: flex;
+    width: 100%;
     background-color: $color__background-header;
     padding:   1em;
     justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-        
+  //  align-items: flex-end;
+    flex-flow: row nowrap;
+border: 5px solid #000;
     @media screen and (min-width: $query__small){
-        justify-content: space-between;
-        flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is 
-        min-height: 70px;
-        flex-wrap: nowrap;
+      //  justify-content: space-between;
+        //flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is
+
+      //  flex-flow: column nowrap;
         padding: 1em 2em;
     }
-    .pageHeaderSearch {    
-            
+    .header-searchform {
+      display: inline-flex;
+            background-color: yellow;
             margin-right: 10px;
             .fa-search{
                 color: $color__text-header;
             }
-        }    
+            .header-searchfield{
+              width: 0;
+            }
+            .header-searchfield:focus{
+              width: 100%;
+            }
+        }
     .btn-trigger{
+      display: inline-flex;
+        background-color: red;
             padding: 0;
             margin: 0;
-    }          
+    }
 }
-.main-navigation ul {
-   // display: none;
-}
-    
+
     .custom-logo-link{
         margin-right: 1em;
         flex-shrink: 0;
     img {
-        display: block;       
+        display: block;
         height: 70px;
         width: auto;
         }
     }
-    
-    
+
+
     .site-branding {
-        display: flex;
-        
-        flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is 
+        display: inline-flex;
+
+        background-color: white;
+        flex: 1 0 auto; //1 it can grow 0 it cna not shring, auto size is whatever content is
         min-height: 70px;
     }
-    
+
     .site-branding__text {
-       display: flex;
+       display: inline-flex;
        flex-direction: column;
        justify-content: center;
        align-items: center;
-       margin-right: 10px;     
+       margin-right: 10px;
        line-height: 1em;
        word-break: keep-all;
         @media screen and (min-width: $query__small) {
           flex-direction: row;
           align-items: flex-end;
-          height: 70px;
-          
+        //  height: 70px;
+
         }
-       
+
             .site-title {   /*h1*/
                 margin: 0;
-                line-height: 1em; 
+                line-height: 1em;
                 padding: 0;
+                font-family: $font__segoe;
                 font-weight: 900;
     a {
 		color: $color__text-header;
@@ -75,35 +84,16 @@
 		&:focus {
 			text-decoration: none;
 		}
-    }   
+    }
 }
-       
+
             .site-description{ /*p*/
                 color: $color__text-header;
                 margin: 0;
                 padding: 0;
                 font-style: italic;
             }
-    }    
-    
-    .site-header__menugroup {
-        display: flex;
-        flex-flow: column nowrap;
-       
-        
-     //  align-items: center;
-     ul {
-         display: flex;
-         flex-direction: column;
-     }
-        @media screen and (min-width: $query__small) {
-          flex-flow: row nowrap;
-        //  align-items: flex-end;
-         justify-content: space-between;
-        ul{
-         display: flex;
-         flex-direction: row;
-         
-        }
-        }
     }
+
+//import header-menu
+@import "headermenu";

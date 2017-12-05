@@ -1,8 +1,9 @@
 .main-navigation {
 	display: flex;
-        flex-direction: column;
-	
-	
+        flex-flow: column nowrap;
+				font-family: $font__bungee;
+
+
 
 	ul {
 		display: flex;
@@ -10,17 +11,17 @@
                 list-style: none;
 		margin: 0;
 		padding: 0;
-                
+
             }
-            
+
             li {
                &:hover,
 	&:focus,
         &:active {
                    //background-color: white;
                    color: red;
-                   
-               } 
+
+               }
             }
             a {
                 text-decoration: none;
@@ -34,15 +35,15 @@
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	
+
 }
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
-		
+
 	}
 	.main-navigation ul {
-		
+
 	}
 }
 
@@ -56,12 +57,12 @@
 	}
 
 	.nav-previous {
-		
+
 		width: 50%;
 	}
 
 	.nav-next {
-		
+
 		text-align: right;
 		width: 50%;
 	}
