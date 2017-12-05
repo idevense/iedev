@@ -8,7 +8,7 @@ button.btn-trigger {
   display: block;
 }
 
-#masthead .main-navigation.toggled{
+#masthead .main-navigation.is-active{
 //  display: flex;
 ul {
   display: block;
@@ -55,8 +55,8 @@ padding: 0;
 #masthead .main-navigation li li a {}
 
 // when button is toggled
-#masthead .main-navigation .toggled,
-.children.toggled,
-.sub-menu.toggled {
+#masthead .main-navigation .is-active,
+.children.is-active,
+.sub-menu.is-active {
 	display: block;
 }

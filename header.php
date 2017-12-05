@@ -49,8 +49,13 @@
                     <?php get_search_form(); ?>
 
                         <nav id="site-navigation" class="main-navigation">
-													<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i>
-		                        <span class="screen-reader-text">Reveal menu</span></button>
+												<!--	<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i> -->
+														<button class="hamburger hamburger--squeeze" type="button" aria-controls="primary-menu" aria-expanded="false" aria-hidden="true">
+														  <span class="hamburger-box">
+														    <span class="hamburger-inner"></span>
+														  </span>
+															<span class="screen-reader-text">Reveal menu</span>
+														</button>
                             <?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
