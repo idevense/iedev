@@ -4,18 +4,22 @@ button.btn-trigger {
   width: 100%;}
 
 // container class
-#masthead .main-navigation{
+.main-navigation{
+  position: relative;
+  width: 12em;
+  grid-column: 1;
+  grid-row: 2/5;
   display: block;
 }
 
-#masthead .main-navigation.is-active{
+.main-navigation.is-active{
 //  display: flex;
 ul {
   display: block;
 }
 }
 // container class first unordered list
-#masthead .main-navigation ul {
+.main-navigation ul {
 display: none;
 list-style: none;
 //display: flex;
@@ -28,34 +32,34 @@ padding: 0;
 }
 
 //unordered list within an unordered list
-#masthead .main-navigation ul ul {}
+.main-navigation ul ul {}
 
  // each navigation item
-#masthead .main-navigation li {color: cyan;}
+.main-navigation li {color: cyan;}
 
 // each navigation item anchor
-#masthead .main-navigation li a {
+.main-navigation li a {
   color: pink;
   text-decoration: none;
 &:hover,
 &:active,
 &:focus{text-decoration: underline;}
 }
-#masthead .main-navigation li a.active{
+.main-navigation li a.active{
   color: white;
   background-color: black;
 }
 // unordered list if there is drop down items
-#masthead .main-navigation li ul {}
+.main-navigation li ul {}
 
 // each drop down navigation item
-#masthead .main-navigation li li {}
+.main-navigation li li {}
 
 // each drap down navigation item anchor
-#masthead .main-navigation li li a {}
+.main-navigation li li a {}
 
 // when button is toggled
-#masthead .main-navigation .is-active,
+.main-navigation .is-active,
 .children.is-active,
 .sub-menu.is-active {
 	display: block;

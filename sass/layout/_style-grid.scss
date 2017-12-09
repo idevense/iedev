@@ -11,18 +11,17 @@
             "sidebar"
             "footer";
     }
+@media screen and (min-width: $query__small) {
+  .main-navigation{
+    position: relative;
+    width: 12em;
+    grid-column: 1;
+    grid-row: 2/5;
+  }
+}
    @media screen and (min-width: $query__medium) {
-    .site {
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: auto auto;
-        grid-template-areas:
-            "header header"
-            "main sidebar"
-            "main sidebar"
-            "footer footer";
-    }
-
+    .site {}
+}
     .site-header {
        grid-area: header;
     }
@@ -40,20 +39,7 @@
         grid-area: footer;
     }
 
-  /*  .main-navigation {
-        grid-area: nav;
-    }*/
-
-    }
     @media screen and (min-width: $query__wide) {
-    .site {
-        display: grid;
-        grid-auto-rows: auto;
-        grid-template-columns: minmax(1fr, auto);
-        grid-template-areas:
-            "header header header"
-            "main main sidebar"
-            "footer footer footer";
-    }
-    }
+    .site {}
+}
 }

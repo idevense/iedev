@@ -638,42 +638,27 @@ a:hover, a:active {
 		    grid-template-columns: minmax(1fr, auto);
 		grid-template-areas: "header" "main" "sidebar" "footer";
 	}
-	@media screen and (min-width: 900px) {
-		.site {
-			display: -ms-grid;
-			display: grid;
-			-ms-grid-rows: auto auto;
-			    grid-template-rows: auto auto;
-			-ms-grid-columns: auto auto;
-			    grid-template-columns: auto auto;
-			grid-template-areas: "header header" "main sidebar" "main sidebar" "footer footer";
+	@media screen and (min-width: 600px) {
+		.main-navigation {
+			position: relative;
+			width: 12em;
+			-ms-grid-column: 1;
+			    grid-column: 1;
+			grid-row: 2/5;
 		}
-		.site-header {
-			grid-area: header;
-		}
-		.site-main {
-			grid-area: main;
-		}
-		.widget-area {
-			grid-area: sidebar;
-			padding: 1em;
-		}
-		.site-footer {
-			grid-area: footer;
-		}
-		/*  .main-navigation {
-        grid-area: nav;
-    }*/
 	}
-	@media screen and (min-width: 1200px) {
-		.site {
-			display: -ms-grid;
-			display: grid;
-			grid-auto-rows: auto;
-			-ms-grid-columns: minmax(1fr, auto);
-			    grid-template-columns: minmax(1fr, auto);
-			grid-template-areas: "header header header" "main main sidebar" "footer footer footer";
-		}
+	.site-header {
+		grid-area: header;
+	}
+	.site-main {
+		grid-area: main;
+	}
+	.widget-area {
+		grid-area: sidebar;
+		padding: 1em;
+	}
+	.site-footer {
+		grid-area: footer;
 	}
 }
 
@@ -948,39 +933,44 @@ button.btn-trigger {
 	width: 100%;
 }
 
-#masthead .main-navigation {
+.main-navigation {
+	position: relative;
+	width: 12em;
+	-ms-grid-column: 1;
+	    grid-column: 1;
+	grid-row: 2/5;
 	display: block;
 }
 
-#masthead .main-navigation.is-active ul {
+.main-navigation.is-active ul {
 	display: block;
 }
 
-#masthead .main-navigation ul {
+.main-navigation ul {
 	display: none;
 	list-style: none;
 	padding: 0;
 }
 
-#masthead .main-navigation li {
+.main-navigation li {
 	color: cyan;
 }
 
-#masthead .main-navigation li a {
+.main-navigation li a {
 	color: pink;
 	text-decoration: none;
 }
 
-#masthead .main-navigation li a:hover, #masthead .main-navigation li a:active, #masthead .main-navigation li a:focus {
+.main-navigation li a:hover, .main-navigation li a:active, .main-navigation li a:focus {
 	text-decoration: underline;
 }
 
-#masthead .main-navigation li a.active {
+.main-navigation li a.active {
 	color: white;
 	background-color: black;
 }
 
-#masthead .main-navigation .is-active,
+.main-navigation .is-active,
 .children.is-active,
 .sub-menu.is-active {
 	display: block;

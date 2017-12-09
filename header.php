@@ -48,20 +48,24 @@
 
                     <?php get_search_form(); ?>
 
-                        <nav id="site-navigation" class="main-navigation">
-												<!--	<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i> -->
-														<button class="hamburger hamburger--squeeze" type="button" aria-controls="primary-menu" aria-expanded="false" aria-hidden="true">
-														  <span class="hamburger-box">
-														    <span class="hamburger-inner"></span>
-														  </span>
-															<span class="screen-reader-text">Reveal menu</span>
-														</button>
-                            <?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-                            ?>
-                        </nav><!-- #site-navigation -->
+
+										<button class="hamburger hamburger--squeeze" type="button" aria-controls="primary-menu" aria-expanded="false" aria-hidden="true">
+											<span class="hamburger-box">
+												<span class="hamburger-inner"></span>
+											</span>
+											<span class="screen-reader-text">Reveal menu</span>
+										</button>
 
 	</header><!-- #masthead -->
+	<section id="site-navigation" class="main-navigation">
+		<nav>
+		<!--	<button class="btn-trigger" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars fa-4" aria-hidden="true"></i> -->
+
+				<?php
+	wp_nav_menu( array(
+	'theme_location' => 'menu-1',
+	'menu_id'        => 'primary-menu',
+	) );
+				?>
+		</nav><!-- #site-navigation -->
+	</section>

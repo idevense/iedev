@@ -5,19 +5,27 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var bcontainer, mcontainer, button, menu, links, i, len;
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
+	bcontainer = document.getElementById( 'masthead' );
+	if ( ! bcontainer ) {
+		console.log('ingen masthead');
 		return;
 	}
 
-	button = container.getElementsByTagName( 'button' )[0];
+	mcontainer = document.getElementById( 'site-navigation' );
+	if ( ! mcontainer ) {
+		console.log('ingen site-nav');
+		return;
+	}
+
+	button = bcontainer.getElementsByTagName( 'button' )[0];
 	if ( 'undefined' === typeof button ) {
+		console.log('ingen button');
 		return;
 	}
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+	menu = mcontainer.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.
 	if ( 'undefined' === typeof menu ) {
@@ -31,13 +39,13 @@
 	}
 
 	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'is-active' ) ) {
-			container.className = container.className.replace( ' is-active', '' );
+		if ( -1 !== mcontainer.className.indexOf( 'is-active' ) ) {
+			mcontainer.className = mcontainer.className.replace( ' is-active', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			button.className = button.className.replace( ' is-active', '' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
-			container.className += ' is-active';
+			mcontainer.className += ' is-active';
 			button.setAttribute( 'aria-expanded', 'true' );
 			button.className += ' is-active';
 			menu.setAttribute( 'aria-expanded', 'true' );
@@ -104,5 +112,5 @@
 				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
 			}
 		}
-	}( container ) );
+	}( mcontainer ) );
 } )();
